@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pregunta verificación 💕</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Pregunta verificación 💕</h1>
+
+    <p>Rafi ama a Bloom?</p>
+
+    <div class="botones">
+    <button onclick="entrar()">💕 Sí 💕</button>
+
+    <button id="noBtn">No...</button>
+</div>
+
+    <script>
+    const noBtn = document.getElementById("noBtn");
+
+    noBtn.addEventListener("mouseover", () => {
+        const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+        const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+
+        noBtn.style.position = "fixed";
+        noBtn.style.left = x + "px";
+        noBtn.style.top = y + "px";
+    });
+
+    function entrar() {
+    document.body.innerHTML = `
+        <div class="final">
+            <img src="assets/gengar.png" alt="Gengar" class="gengar">
+
+            <h1>Sabía que ibas a decir que sí 💜</h1>
+
+            <p>Ahora sí... tengo un regalito para vos, Rafi 👻💜</p>
+            <button onclick="abrirPlaylist()">🎵 Tengo algo para vos... 🎵</button>
+        </div>
+    `;
+}function abrirPlaylist() {
+    document.body.innerHTML = `
+        <div class="playlist">
+
+            <div class="estrellas">
+                <span>✦</span>
+                <span>✧</span>
+                <span>✦</span>
+                <span>⋆</span>
+                <span>✧</span>
+                <span>✦</span>
+                <span>⋆</span>
+                <span>✧</span>
+                <span>✦</span>
+                <span>⋆</span>
+                <span>✧</span>
+                <span>✦</span>
+            </div>
+
+            <h1>🎵 Una playlist para vos 🎵</h1>
+
+            <p>Hice esto especialmente para vos, Rafi 💜</p>
+
+            <p>100 canciones elegidas para vos 👻💜</p>
+
+            <iframe
+                src="https://open.spotify.com/embed/playlist/0nDkbbRnOJh0QYILSkaif4"
+                width="80%"
+                height="500"
+                frameborder="0"
+                allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy">
+            </iframe>
+            <button onclick="abrirCarta()">💌 Tengo algo más para vos...</button>
+
+        </div>
+    `;
+}function abrirCarta() {
+    document.body.innerHTML = `
+        <div class="carta-container">
+
+            <h1>💌 Tengo algo para vos 💌</h1>
+
+            <p class="instruccion">
+                Hacé clic en la carta para abrirla 👀💜
+            </p>
+
+            <div class="sobre" onclick="abrirSobre()">
+
+                <div class="sobre-tapa"></div>
+
+                <div class="sobre-cuerpo">
+                    💌
+                </div>
+
+            </div>
+
+        </div>
+    `;
+}
+function abrirSobre() {
+    document.body.innerHTML = `
+        <div class="carta">
+
+            <h1>💌 Una cartita para vos 💌</h1>
+
+            <div class="papel">
+
+                <h2>Feliz cumpleaños, mi Rafi &lt;3</h2>
+
+                <p>
+                    Quise hacerte esto porque me pareció un detalle muy bonito para vos.
+                    Quería hacer algo especial para demostrarte aunque sea un poquito
+                    todo lo que te amo.
+                </p>
+
+                <p>
+                    Te amo con todo mi corazón y sos lo mejor que me pasó hasta ahora.
+                    Me hace muy feliz poder compartir todo esto con vos y espero que
+                    podamos seguir creando muchos momentos juntos.
+                </p>
+
+                <p>
+                    Espero que tengas un cumpleaños hermoso y que disfrutes muchísimo
+                    tu día.
+                </p>
+
+                <p>
+                    <strong>Feliz cumpleaños, mi Rafi. Te amo muchísimo. &lt;3</strong> 💜
+                </p>
+
+            </div>
+
+        </div>
+    `;
+}
+
+</script>
+
+</body>
+
+</html>
